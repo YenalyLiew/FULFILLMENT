@@ -14,12 +14,12 @@ fun main() {
             }
         }
     } else throw IllegalArgumentException("输入为空！")
-    do {
+    while (hasEqual(list)) {
         list.removeAll(list)
         repeat(ramd.toInt()) {
             list.add((first.toInt()..end.toInt()).random())
         }
-    } while (hasEqual(list))
+    }
     list.sort()
     println("\n恭喜下面${ramd}位同学获得资格：")
     println(list)
